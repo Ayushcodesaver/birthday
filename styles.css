@@ -1,0 +1,106 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ae3e3e;
+    text-align: center;
+}
+
+/* Floating Balloons */
+.balloon {
+    position: absolute;
+    width: 50px;
+    height: 70px;
+    background-color: #ff6ec7;
+    border-radius: 50%;
+    animation: floatUp 10s infinite;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100vh);
+    }
+}
+
+/* Book Container */
+.book {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    padding: 20px;
+    background-color: #d1a4ce;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Pages */
+.page {
+    display: none;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: opacity 0.5s ease;
+}
+
+/* Page 1 */
+.page1 {
+    display: block;
+}
+
+/* Image Handling */
+.page img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Text Styling */
+.page p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+    color: #333;
+}
+
+/* Button Styles */
+.button, .yes, .no {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #ff6ec7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.button:hover, .yes:hover, .no:hover {
+    background-color: #ff4a94;
+}
+
+.yes, .no {
+    width: 120px;
+    margin: 20px;
+}
+
+/* Page Navigation */
+.page .button {
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    .page p {
+        font-size: 14px;
+    }
+
+    .button, .yes, .no {
+        width: 100%;
+        font-size: 14px;
+    }
+}
